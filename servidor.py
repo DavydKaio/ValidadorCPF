@@ -51,19 +51,6 @@ def execucao(connection, client):
     response = {"message": resultado}
     connection.send(json.dumps(response).encode(encoding='utf-8'))
 
-    # if(len(dados_em_dict["CPF"]) > 1 and len(dados_em_dict["CPF"]) != 14):
-    #   connection.send(json.dumps({"Valor digitado nao e um CPF ou o comando de saida"}).encode(encoding='utf-8'))
-
-        # if (dados_em_dict["operation"] == "sair"):
-        #     response = {"requestId": dados_em_dict["requestId"], "message": "operation terminated by the client"}
-        #     connection.send(json.dumps(response).encode(encoding='utf-8'))
-        #     print("Cliente encerrou a comunicação")
-        #     break
-
-        # if (dados_em_dict["operation"] not in comandos):
-        #     response = {"requestId": dados_em_dict["requestId"], "errorCode": "402", "message": "Operation unavailable"}
-        #     connection.send(json.dumps(response).encode(encoding='utf-8'))
-
   connection.close()
 
 
